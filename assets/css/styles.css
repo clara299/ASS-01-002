@@ -104,9 +104,9 @@ header .inner{
 }
 
 .overview{
-    width: 70%;
-    margin: 5em 15%;
-    padding: 1em;
+    padding-top: 3em;
+    padding-bottom: 10em;
+    text-align: center;
     justify-content: center;
     align-items: center;
 }
@@ -169,35 +169,29 @@ header .inner{
 .who {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 0.5em;;
-    margin-top: 2em;
+    gap: 0.5em;
+    text-align: center;
 }
 .who div {
-    display: flex;
+    max-width: 100%;
     justify-content: center;
     padding: 1em;
 
 }
-.who h3{
-    
-
+.who img{
+    max-width: 100%;
+    border-radius: 20px;
 }
 .who div.photo {
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     min-height: 20em;
-    border-radius: 10px;
 }
-.edwina {
-    background-image: url(../images/edwinajanscropped.jpg);
+.who h4{
+    padding-bottom: 1em;
 }
-.amy {
-    background-image: url(../images/amyjarvis);
-}
-.rachel {
-    background-image: url(../images/rachel.png);
-}
+
 
 
 /* our Patron, home page */
@@ -218,23 +212,19 @@ header .inner{
     background-repeat: no-repeat;
     background-position: center center;
     min-height: 10em;
-    border-radius: 10px;
-    width: 90%;
+
+
 }
-.ross{
-    background-image: url(../images/timross.png);
-}
+
 #patrontitle{
     padding-top: 2em;
 }
-.ross{
-    float: left;
-    width: 30%;
-    height: 100%;
+.patron img{
+    width: 100%;
     border-radius: 10px;
 }
-.patron > div:last-child {
-    grid-column: 2 / 3;
+.patron div {
+    grid-template-columns: 1fr 2fr;
 }
 
 
@@ -394,7 +384,7 @@ header .inner{
     width: 100%;
     height: 100%;
     /* set the opacity of the background image */
-    background-color: rgb(137, 137, 137);
+    background-color: rgb(255, 255, 255);
     opacity: 0; /* initial opacity set to 0 */
     transition: opacity 0.5s ease; /* transition on opacity change */
     z-index: -1;
@@ -410,79 +400,72 @@ header .inner{
     background-size: cover;
     /* removes grayscale */
     filter:grayscale(0);
+    /* position the text in the box */
+    background-position: center center;
 }
-/* set a background image on one of the boxes */
 .gallery .library {
-    background-color: rgb(137,137,137);
+    background-color: rgb(137, 137, 137);
     background-image: url(../images/library.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /* removes grayscale */
     filter:grayscale(0);
-/* position the text in the box */
+    background-position: center center;
 }
 .gallery .universityhouse {
     background-color: rgb(137,137,137);
     background-image: url(../images/university-house.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /* removes grayscale */
     filter:grayscale(0);
-/* position the text in the box */
+    background-position: center center;
 }
 .gallery .churchill {
     background-color: rgb(137,137,137);
     background-image: url(../images/churchill.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /* removes grayscale */
     filter:grayscale(0);
-/* position the text in the box */
+    background-position: center center;
 }
 .gallery .urambi {
     background-color: rgb(137,137,137);
     background-image: url(../images/urambi.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /* removes grayscale */
     filter:grayscale(0);
-/* position the text in the box */
+    background-position: center center;
 }
 .gallery .giralang {
     background-color: rgb(137,137,137);
     background-image: url(../images/giralang.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /* removes grayscale */
     filter:grayscale(0);
-/* position the text in the box */
+    background-position: center center;
 }
 .gallery .musicschool {
     background-color: rgb(137,137,137);
     background-image: url(../images/schoolofmusic.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /* removes grayscale */
     filter:grayscale(0);
-/* position the text in the box */
+    background-position: center center;
 }
 .gallery .civicsquare {
     background-color: rgb(137,137,137);
     background-image: url(../images/civicsquare.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /* removes grayscale */
     filter:grayscale(0);
-/* position the text in the box */
+    background-position: center center;
 }
 .gallery .colonialmutual {
     background-color: rgb(137,137,137);
     background-image: url(../images/colonialmutual.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /* removes grayscale */
     filter:grayscale(0);
-/* position the text in the box */
+    background-position: center center;
 }
 
 .gallery h3 {
@@ -495,18 +478,42 @@ header .inner{
 .gallery div:hover {
     /* add a grayscale flter */
     filter:grayscale(0.8);
-    /* opacity: 50%; */
     border-radius: 10px;
 }
 .gallery div:hover h3 {
     /* make the text visible again on hovers */
     display: block;
-    /* opacity: 200%; */
+
 }
 
 #resourcestitle{
     padding-top: 2em;
 }
+
+/* resources page layout*/
+
+.resourcespage{
+    padding-top: 2em;
+}
+.resourcespage h4{
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+.resourcesimages {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
+}
+.resourcesimages img{
+    border-radius: 20px;
+    width: 100%;
+}
+
+
 
 
 /* All the footer things below */
@@ -533,8 +540,6 @@ footer {
 This defines how the site changes when the screen size is changed */
 
 @media (aspect-ratio: 2/1){
-    /* I made this to use my ultrawide at home, but might affect 
-    on 4k screens too. How to combat? Maybe add a height factor*/
     .inner{
         width: 50%;
         margin: 0 auto;
@@ -546,12 +551,26 @@ This defines how the site changes when the screen size is changed */
     }
 }
 @media screen and (max-width: 48em) {
-    .gallery{
-        grid-template-columns: 100%;
+    .inner{
+        width: 90%;
     }
     .eventsgallery{
         grid-template-columns: 1fr;
     }
-    
+    .patron{
+        grid-template-columns: 1fr;
+    }
+    .who{
+        grid-template-columns: 1fr;
+    }
+    .gallery{
+        grid-template-columns: 100%;
+    }
+    .gallery h3{
+        display: block;
+    }
+    .indexlink{
+        display: none;
+    }
 }
 
