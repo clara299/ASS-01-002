@@ -513,7 +513,36 @@ header .inner{
     width: 100%;
 }
 
+.videos{
+    padding-top: 5em;
+}
+.virtualtour h2{
+    padding-bottom: 1em;
+}
+.virtualtour a{
+    text-decoration: none;
+    color: black;
+    text-decoration: underline;
 
+}
+.virtualtourlink{
+    padding-bottom: 1em;
+}
+.virtualtourtext{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1em;
+}
+.virtualtour img{
+    width: 100%;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+
+.modernpanel{
+    padding-top: 3em;
+}
 
 
 /* All the footer things below */
@@ -539,7 +568,7 @@ footer {
 /* media queries    
 This defines how the site changes when the screen size is changed */
 
-@media (aspect-ratio: 2/1){
+@media (aspect-ratio: 120em){
     .inner{
         width: 50%;
         margin: 0 auto;
@@ -571,6 +600,9 @@ This defines how the site changes when the screen size is changed */
     }
     .indexlink{
         display: none;
+    }
+    .virtualtourtext{
+        grid-template-columns: 1fr;
     }
 }
 
