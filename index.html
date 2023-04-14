@@ -6,11 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/reset.css" />
         <link rel="stylesheet" href="assets/css/styles.css" />
+
+        <!-- The following creates the  -->
         <link rel="apple-touch-icon" sizes="180x180" href="../ASS-01-002/assets/images/favicon_io">
         <link rel="icon" type="image/png" sizes="32x32" href="../ASS-01-002/assets/images/favicon_io/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../ASS-01-002/assets/images/favicon_io/favicon-16x16.png">
         <link rel="manifest" href="../ASS-01-002/assets/images/favicon_io/site.webmanifest">
 
+        <!-- Defines font family -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -18,13 +21,13 @@
 
     <body>
         <header>
-            <div class="inner">
-                <a href="index.html">
+            <div class="inner"> <!-- This makes everything on the page have a small margin along the sides, to center it in the screen. Everything should be inside this div-->
+                <a href="index.html"> <!-- This is to make the logo image on the header a link for the home page-->
                     <div class="headerlogo"></div>
                 </a>
-                <nav>
+                <nav> <!-- This is the navigation bar-->
                      <ul>
-                        <li class="currentpage indexlink"><a href="index.html">Home</a></li>
+                        <li class="currentpage indexlink"><a href="index.html">Home</a></li> <!-- CURRENTPAGE allows the CSS to know what page the user is currently on, highlighting that option in the header-->
                         <li><a href="events.html">Events</a></li>
                         <li><a href="resources.html">Resources</a></li>
                      </ul>
@@ -54,12 +57,12 @@
                 </div>
 
                 
-                
+                <!--  A small bar of upcoming events, with a link in the title to the events page -->
                 <div class="upcomingeventsshortcut">
                     <a href="events.html"><h2>Upcoming Events</h2></a>
                 </div>
 
-
+                <!-- Displays 3 closest upcoming events -->
                 <div class="eventsgallery">
                     <div>
                         <a href="https://www.trybooking.com/events/999149/sessions" target="_blank">
@@ -89,6 +92,8 @@
 
                 </div>
                 
+
+                <!-- "About us" page, all on the home page -->
                 <div class="about">
                     <div class="aboutustitle"><h2>About Us</h2></div>
                     <div id="aboutussubtitle"><h3>What's so Special About Canberra?</h3></div>
@@ -109,7 +114,7 @@
                         
                 </div>
 
-                
+                <!-- A breakdown of the three people running CM -->
                 <div class="whotitle"><h3>Who are we?</h3></div>
                 <div class="who">
                     <div>
@@ -140,19 +145,14 @@
                             Institute Scholar.</p>
                         
                     </div>
-                    
-                    
-                    
-                    
-                    
-
-                    
                 </div>
+
+
 
 
                 <h3 id="patrontitle">Our Patron, Tim Ross</h3>
                 <div class="patron">
-                    
+                    <!-- This is all in a grid so it can be easily reorganised when the page resizes -->
                     <div class="photo"><img src="../ASS-01-002/assets/images/timross.png"></div>
                     <div>
                         <p>TV and radio host, comedian, author and self-confessed ‘Design Nerd’, 
@@ -177,8 +177,9 @@
 
 
 
-                <div class="partnerstitle"><h2>Our Partners</h2></div>
 
+                <div class="partnerstitle"><h2>Our Partners</h2></div>
+                <!-- This area is for the partners of CM, with working links to all of their websites -->
                 <div class="partners">
                     <div class="partner">
                         <h4>University House</h4>
@@ -186,7 +187,7 @@
                         <p>University House hosted Canberra Modern 2017 in its fantastic mid-century setting. Special 
                             thanks to the Master of the House, Peter Kanowski, Operations Manager, Matt Dowdney and 
                             UH Events Team for their assistance with the events.</p>
-                        <div class="findoutbutton"><p><a class="button" href="https://unihouse.anu.edu.au/" target="_blank">FIND OUT MORE</a></p></div>
+                        <div class="findoutbutton"><p><a class="button" href="https://unihouse.anu.edu.au/" target="_blank">FIND OUT MORE</a></p></div> <!--Little button to click on. Very cute.-->
                     </div>
 
                     <div class="partner">
@@ -245,6 +246,7 @@
         </main>
 
         <footer>
+            <!-- Very basic footer, just contains a small amount of basic info -->
             <div class="inner">
                 <div class="footercontents">
                     <div>

@@ -1,4 +1,4 @@
-/* adjust display of header */
+
 body{
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
@@ -28,6 +28,8 @@ p{
     margin-bottom: 1.2em;
     margin-top: 0.2em;
 }
+
+/* Header attributes */
 .headerlogo{
     background-image: url(../images/cm-logo.png);
     height: 50px;
@@ -350,11 +352,40 @@ header .inner{
 }
 
 
-/* Everything for the gallery on the resources page is below */
+
+
+/* Defines attributes for Resources Page */
+#resourcestitle{
+    padding-top: 2em;
+}
+
+
+.resourcespage{
+    padding-top: 2em;
+}
+.resourcespage h4{
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+.resourcesimages {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
+}
+.resourcesimages img{
+    border-radius: 20px;
+    width: 100%;
+}
+
+
+/* Everything for the Canberra's Modern section on the resources page is below */
+/* Note: I did not put all of them in here */
 .gallery {
     display: grid;
-    /* try using different units here... */
-    /* if 4 values = 4 columns */
     grid-template-columns: 1fr 1fr 1fr 1fr;  
     column-gap:.5em;
     row-gap: 1em;
@@ -366,7 +397,7 @@ header .inner{
     height: 100%;
     text-decoration: none;
 }
-/* make the boxes look nice */
+/* Defines attributes to make the boxes look nice */
 .gallery div {
     background-color: rgb(137,137,137);
     min-height: 20em;
@@ -387,7 +418,7 @@ header .inner{
     background-color: rgb(255, 255, 255);
     opacity: 0; /* initial opacity set to 0 */
     transition: opacity 0.5s ease; /* transition on opacity change */
-    z-index: -1;
+    z-index: -1; /* Figuring out that this is what I needed took hours */
     border-radius: 10px;
 }
 .gallery div:hover::before {
@@ -486,36 +517,15 @@ header .inner{
 
 }
 
-#resourcestitle{
-    padding-top: 2em;
-}
 
-/* resources page layout*/
 
-.resourcespage{
-    padding-top: 2em;
-}
-.resourcespage h4{
-    padding-top: 1em;
-    padding-bottom: 2em;
-}
-.resourcesimages {
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    text-align: center;
-    align-items: center;
-    justify-content: center; 
-}
-.resourcesimages img{
-    border-radius: 20px;
-    width: 100%;
-}
 
+/* Defines attributes for block of content under images on Resources page */
 .videos{
     padding-top: 5em;
 }
+
+/* Defines attributes for Virtual Tour block */
 .virtualtour h2{
     padding-bottom: 1em;
 }
@@ -539,19 +549,66 @@ header .inner{
     margin-right: 20px;
 }
 
-
+/* Defines attributes for the Growing Up Modern Series */
+/* Note: I did not put all of them in here */
 .modernpanel{
     padding-top: 3em;
 }
+.modernpanel h2{
+    padding-bottom: 1em;
+}
+.modernpanelgrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.2em;
+    width: 100%;
+}
+.modernpanelvideobox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    gap: 0.2em;
+}
+.modernpanelvideobox iframe{
+    padding-right: 1em;
+}
+.modernpanelvideobox h3{
+    padding-left: 1em;
+    width: 50%;
+}
+
+/* Defines attributes for individual video blocks */
+.singlevideo{
+    padding-top: 5em;
+}
+.singlevideo h2{
+    padding-bottom: 1em;
+}
+.singlevideogrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.videoblurb{
+    justify-content: center;
+    align-items: center;
+    width: 100%;   
+}
+
+
 
 
 /* All the footer things below */
-footer {
-    background: #5d5d5d;
-
-}
 
 .footercontents{
+    margin-top: 5em;
+    border-top: 1px solid black;
     text-align: center;
     padding-top: 2em;
     padding-bottom: 2em;
@@ -568,17 +625,21 @@ footer {
 /* media queries    
 This defines how the site changes when the screen size is changed */
 
-@media (aspect-ratio: 120em){
+/* defining attributes for ultrawide and 4K screens */
+@media (min-width: 120em){
     .inner{
         width: 50%;
         margin: 0 auto;
     }
 }
+/* Defining attributes for small computer/tablet screen  */
 @media screen and (max-width: 93em) {
     .gallery{
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+
+/* Defining attributes for phone screen */
 @media screen and (max-width: 48em) {
     .inner{
         width: 90%;
@@ -603,6 +664,43 @@ This defines how the site changes when the screen size is changed */
     }
     .virtualtourtext{
         grid-template-columns: 1fr;
+    }
+    .singlevideo{
+        padding-top: 5em;
+    }
+    .singlevideogrid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2em;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .videoblurb{
+        align-items: left;
+        width: 100%;   
+    }
+    .modernpanelvideobox{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%; 
+        height: 100%;
+        gap: 0.2em;
+        padding-bottom: 2em;
+    }
+    .modernpanelvideobox h3{
+        width: 100%;
+        
+    }
+    .videos h3{
+        font-size: 1.5em;
+    }
+    .videos h2{
+        font-size: 2em;
+    }
+    .videos iframe{
+        width: 100%;
     }
 }
 
